@@ -15,7 +15,7 @@ const JobDetails = () => {
                 <h2 className="card-title text-center mx-auto">{title}</h2>
                 <p>{company}</p>
                 <div className="card-actions justify-center">
-                    <Link to={`/jobDetails/${_id}`}>
+                    <Link to={`/jobApply/${_id}`}>
                         <button className="btn btn-secondary">Apply Now</button>
                     </Link>
                 </div>
