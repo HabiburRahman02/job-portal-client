@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
+import toast from "react-hot-toast";
 
 const JobApply = () => {
     const { id } = useParams()
@@ -26,8 +27,13 @@ const JobApply = () => {
             .then(data => {
                 console.log(data.data);
                 if (data.data.insertedId) {
-                    alert('job application success')
+                    toast.success('job application success', {
+                        duration: 2000
+                    })
                 }
+            })
+            .catch(error => {
+                console.log(error);
             })
 
     }
