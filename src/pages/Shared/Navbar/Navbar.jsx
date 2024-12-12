@@ -10,8 +10,7 @@ const Navbar = () => {
     }
     const links = <>
         <li><NavLink to='/'>Home</NavLink></li>
-        <li><NavLink to='/signup'>Sign Up</NavLink></li>
-        <li><NavLink to='/signin'>Sign In</NavLink></li>
+        <li><NavLink to='/jobApplication'>Job Application</NavLink></li>
     </>
     return (
         <div className="navbar bg-base-100">

@@ -23,7 +23,7 @@ const JobApply = () => {
             resume
         }
 
-        axios.post('http://localhost:5000/job-application', jobApplication)
+        axios.post('http://localhost:5000/job-applications', jobApplication)
             .then(data => {
                 console.log(data.data);
                 if (data.data.insertedId) {
