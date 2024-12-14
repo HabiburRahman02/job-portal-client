@@ -1,4 +1,6 @@
+import axios from "axios";
 import useAuth from "../../hooks/useAuth";
+import toast from "react-hot-toast";
 
 const AddNewJob = () => {
     const { user } = useAuth();
@@ -12,6 +14,14 @@ const AddNewJob = () => {
         postInfo.requirements = postInfo.requirements.split('\n');
         postInfo.responsibilities = postInfo.responsibilities.split('\n');
         console.log(postInfo);
+
+        axios.post('http://localhost:5000/post-jobs', postInfo)
+            .then(data => {
+                console.log(data.data);
+                if (data.data.insertedId) {
+                    toast.success('Post a job')
+                }
+            })
 
     }
     return (
