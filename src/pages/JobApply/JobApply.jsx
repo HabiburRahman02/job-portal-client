@@ -28,7 +28,8 @@ const JobApply = () => {
                 console.log(data.data);
                 if (data.data.insertedId) {
                     toast.success('job application success', {
-                        duration: 2000
+                        duration: 1000,
+                        position: 'top-right'
                     })
                 }
             })

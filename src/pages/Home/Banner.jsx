@@ -5,7 +5,7 @@ const Banner = () => {
     return (
         <div className="hero  min-h-[500px]">
             <div className="hero-content flex-col lg:flex-row-reverse gap-12">
-                <div className="md:flex-1">
+                <div className="md:flex-1 w-full overflow-hidden">
                     <motion.img
                         animate={{ y: [50, 100, 50] }}
                         transition={{
