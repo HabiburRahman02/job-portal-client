@@ -1,12 +1,11 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import useAuth from "../../hooks/useAuth";
-import { complex } from "motion/react";
 
 const JobApplication = () => {
     const { user } = useAuth();
     const [application, setApplication] = useState();
-    console.log(application);
+    // console.log(application);
     useEffect(() => {
         axios.get(`http://localhost:5000/job-application?email=${user?.email}`)
             .then(data => setApplication(data.data))
@@ -32,7 +31,7 @@ const JobApplication = () => {
                                 <th>{i + 1}</th>
                                 <td>{app.title}</td>
                                 <td>{app.company}</td>
-                                <td>Blue</td>
+                                <td>blue</td>
                             </tr>)
                         }
                     </tbody>
