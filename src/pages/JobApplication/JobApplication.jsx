@@ -7,7 +7,7 @@ const JobApplication = () => {
     const [application, setApplication] = useState();
     // console.log(application);
     useEffect(() => {
-        axios.get(`http://localhost:5000/job-application?email=${user?.email}`)
+        axios.get(`http://localhost:5000/job-application?email=${user?.email}`, { withCredentials: true })
             .then(data => setApplication(data.data))
     }, [user?.email])
 
